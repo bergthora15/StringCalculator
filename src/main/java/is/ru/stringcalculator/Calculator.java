@@ -9,11 +9,7 @@ public class Calculator {
 		else{
 			if(numbers.contains(",")) {
 				String numb[] = numbers.split(",");
-				int total = 0;
-				for (String n : numb) {	
-					total +=toInt(n);
-				}
-				return total;
+				return sum(numb);
 			}
 			return 1;
 		}
@@ -21,5 +17,12 @@ public class Calculator {
 	}
 	private static int toInt(String numbers) {
 		return Integer.parseInt(numbers);
+	}
+	private static int sum(String[] numbers) {
+		int total = 0;
+		for (String n : numbers) {	
+			total +=toInt(n);
+		}
+		return total;
 	}
 }
