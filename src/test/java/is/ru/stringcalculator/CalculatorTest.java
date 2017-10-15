@@ -35,14 +35,17 @@ public class CalculatorTest {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 	@Test 
-	public void testNegativeNumbers() throws Exception 
-	{
+	public void testNegativeNumbers() throws Exception {
 		try {
         	assertEquals(1, Calculator.add("-1,2"));
      	} catch(Exception e) {
     	String messages = "Negatives not allowed: -1";
         assertEquals(messages, e.getMessage());
 		}
+	}
+	@Test
+	public void testNumber1000() {
+		assertEquals(5, Calculator.add("1001,2,3"));
 	}
 }
 	//@Rule

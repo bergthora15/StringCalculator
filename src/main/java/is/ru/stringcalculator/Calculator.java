@@ -22,11 +22,14 @@ public class Calculator {
 	private static int sum(String[] numbers) {
 		int total = 0;
 		for (int i = 0; i < numbers.length; i++) {	
-				if(toInt(numbers[i]) < 0) {
+			if(toInt(numbers[i]) < 0) {
 				throw new RuntimeException("Negatives not allowed: " + numbers[i]);
 			}
-			total += toInt(numbers[i]);
+			if(toInt(numbers[i]) <= 1000) {
+				total += toInt(numbers[i]);
+			}
 		}
+			//total += toInt(numbers[i]);
 		return total;
-	}
+	}		
 }
