@@ -11,9 +11,15 @@ public class Calculator {
 				String numb[] = numbers.split(",");
 				return sum(numb);
 			}
-			return 1;
+			
+			else if(numbers.contains("\n"))
+			{
+				String numb[] = numbers.split("\n");
+				return sum(numb);
+			}
+
 		}
-		
+		return 1;
 	}
 	private static int toInt(String numbers) {
 		return Integer.parseInt(numbers);
