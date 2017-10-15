@@ -12,13 +12,6 @@ public class Calculator {
 				String numb[] = numbers.split(",|\n");
 				return sum(numb);
 			}
-			
-			else if(numbers.contains("\n"))
-			{
-				String numb[] = numbers.split("\n");
-				return sum(numb);
-			}
-
 		}
 		return 1;
 	}
