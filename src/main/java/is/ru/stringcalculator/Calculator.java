@@ -7,8 +7,9 @@ public class Calculator {
 			return 0;	
 		}
 		else{
-			if(numbers.contains(",")) {
-				String numb[] = numbers.split(",");
+			String num[] = numbers.split(",");
+			if(numbers.contains(",") || numbers.contains("\n")) {
+				String numb[] = numbers.split(",|\n");
 				return sum(numb);
 			}
 			
