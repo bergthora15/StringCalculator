@@ -47,6 +47,10 @@ public class CalculatorTest {
 	public void testNumberHigherThen1000() {
 		assertEquals(5, Calculator.add("1001,2,3"));
 	}
+	@Test
+	public void testDifferentDelimeter() {
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
 }
 	//@Rule
 	//public ExpectedException thrown = ExpectedException.none();

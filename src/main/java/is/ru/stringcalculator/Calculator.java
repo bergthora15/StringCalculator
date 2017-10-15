@@ -8,14 +8,14 @@ public class Calculator {
 		}
 		else{
 			String delimeter = ",|\n";
-			String num[] = numbers.split(",");
-			if(numbers.contains(",") || numbers.contains("\n")) {
-				String numb[] = numbers.split(delimeter);
-				return sum(numb);
+			if(numbers.startsWith("//")) {
+				delimeter = numbers.substring(2, 3);
+				numbers = numbers.substring(4, numbers.length());
 			}
-			return 1;
+			//String num[] = numbers.split(",");
+			String numb[] = numbers.split(delimeter);
+			return sum(numb);
 		}
-		
 	}
 	private static int toInt(String numbers) {
 		return Integer.parseInt(numbers);
