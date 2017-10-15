@@ -12,16 +12,20 @@ public class Calculator {
 				String numb[] = numbers.split(",|\n");
 				return sum(numb);
 			}
+			return 1;
 		}
-		return 1;
+		
 	}
 	private static int toInt(String numbers) {
 		return Integer.parseInt(numbers);
 	}
 	private static int sum(String[] numbers) {
 		int total = 0;
-		for (String n : numbers) {	
-			total +=toInt(n);
+		for (int i = 0; i < numbers.length; i++) {	
+				if(toInt(numbers[i]) < 0) {
+				throw new RuntimeException("Negatives not allowed: " + numbers[i]);
+			}
+			total += toInt(numbers[i]);
 		}
 		return total;
 	}

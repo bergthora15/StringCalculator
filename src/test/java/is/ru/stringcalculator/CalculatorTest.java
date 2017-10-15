@@ -1,7 +1,9 @@
 package is.ru.stringcalculator;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 	@Test
@@ -29,8 +31,30 @@ public class CalculatorTest {
 		assertEquals(3, Calculator.add("1\n2"));
 	}
 	@Test 
-	public void testNewLinesAndComma() {
+	public void testNewLinesAndCommas() {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
+	@Test 
+	public void testNegativeNumbers() throws Exception 
+	{
+		try {
+        	assertEquals(1, Calculator.add("-1,2"));
+     	} catch(Exception e) {
+    	String messages = "Negatives not allowed: -1";
+        assertEquals(messages, e.getMessage());
+		}
+	}
 }
+	//@Rule
+	//public ExpectedException thrown = ExpectedException.none();
+	
+	//@Test
+	//public void testNegativeNumbers() {
+	//	thrown.expect(RuntimeException.class);
+ 	//	thrown.expectMessage("Negatives not allowed: -1");
+
+ 	//	Calculator.add(-1,2);
+
+	//}
+
 
