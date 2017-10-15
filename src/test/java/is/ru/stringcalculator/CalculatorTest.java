@@ -44,7 +44,7 @@ public class CalculatorTest {
 		}
 	}
 	@Test
-	public void testNumber1000() {
+	public void testNumberHigherThen1000() {
 		assertEquals(5, Calculator.add("1001,2,3"));
 	}
 }

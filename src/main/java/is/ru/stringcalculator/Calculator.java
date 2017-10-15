@@ -29,7 +29,6 @@ public class Calculator {
 				total += toInt(numbers[i]);
 			}
 		}
-			//total += toInt(numbers[i]);
 		return total;
 	}		
 }
