@@ -17,8 +17,12 @@ public class CalculatorTest {
 		assertEquals(3, Calculator.add("1,2"));
 	}
 	@Test
-	public void testMultipleNumbers() {
+	public void testThreeNumbers() {
 		assertEquals(6, Calculator.add("1,2,3"));
+	}
+	@Test
+	public void testMultipleNumbers() {
+		assertEquals(250, Calculator.add("10,10,50,100,30,50"));
 	}
 }
 
