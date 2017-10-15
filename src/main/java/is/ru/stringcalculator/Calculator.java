@@ -7,9 +7,10 @@ public class Calculator {
 			return 0;	
 		}
 		else{
+			String delimeter = ",|\n";
 			String num[] = numbers.split(",");
 			if(numbers.contains(",") || numbers.contains("\n")) {
-				String numb[] = numbers.split(",|\n");
+				String numb[] = numbers.split(delimeter);
 				return sum(numb);
 			}
 			return 1;
