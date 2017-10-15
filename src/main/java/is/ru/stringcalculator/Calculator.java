@@ -12,7 +12,6 @@ public class Calculator {
 				delimeter = numbers.substring(2, 3);
 				numbers = numbers.substring(4, numbers.length());
 			}
-			//String num[] = numbers.split(",");
 			String numb[] = numbers.split(delimeter);
 			return sum(numb);
 		}

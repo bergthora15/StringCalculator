@@ -52,16 +52,5 @@ public class CalculatorTest {
 		assertEquals(3, Calculator.add("//;\n1;2"));
 	}
 }
-	//@Rule
-	//public ExpectedException thrown = ExpectedException.none();
-	
-	//@Test
-	//public void testNegativeNumbers() {
-	//	thrown.expect(RuntimeException.class);
- 	//	thrown.expectMessage("Negatives not allowed: -1");
-
- 	//	Calculator.add(-1,2);
-
-	//}
 
 
